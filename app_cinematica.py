@@ -59,7 +59,7 @@ with tab1:
 
 # Opcion 2: Pegar el vector completo
 with tab2:
-    in_vec = st.text_input("r(t) =", value="(4t-3, 1+6t-4.9t^2)")
+    in_vec = st.text_input("r(t) =", value="(4t-3, 1+6t-g/2t^2)")
     if st.button("Calcular Vector", type="primary"):
         vx, vy = parsear_entrada_vectorial(in_vec)
         if vx and vy: x_raw, y_raw = vx, vy
@@ -74,6 +74,9 @@ with tab3:
         x_raw, y_raw = "4 - 3t", "1 + 6t - g/2 * t^2"
     if st.button("🚀 Proyectil 2"):
         x_raw, y_raw = "4t - 3", "-5t^2 + 8t"
+    if st.button("🎓 Ejercicio de examen"):
+        x_raw, y_raw = "3t - 2", "-5/4*t^2 + 4t"
+        t_fin = 4.0
 
 # --- CÁLCULOS MATEMÁTICOS ---
 if x_raw and y_raw:
